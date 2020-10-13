@@ -7,6 +7,9 @@ WHILE USING PIP OR PIP3 IN BASH SHELL , I GOT ERROR
 BUT IT WORKS IN CMD 
 
   WHAT TO DO ?
+  
+   Video link
+https://youtu.be/bJGz62VHynA 
 
 SYSTEM DETAILS :  
      WINDOWS 10 [64 BITS]
