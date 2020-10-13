@@ -8,8 +8,13 @@ BUT IT WORKS IN CMD
 
   WHAT TO DO ?
   
-   Video link
-https://youtu.be/bJGz62VHynA 
+   Video links
+
+1.  https://youtu.be/bJGz62VHynA 
+
+2.  https://youtu.be/Pn-XwD_7ZcI
+
+3.  https://youtu.be/OIR2p0yU9fA
 
 SYSTEM DETAILS :  
      WINDOWS 10 [64 BITS]
