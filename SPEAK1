@@ -1,0 +1,65 @@
+import speech_recognition as sr
+import pyttsx3
+import os
+import time
+import string
+
+speech = sr.Recognizer()
+try:
+    engine = pyttsx3.init()
+except ImportError:
+    print("REQUESTED MODULE COULD NOT FOUND")
+except RuntimeError:
+    print("DRIVER FAILS TO INITILIZE")
+
+voices = engine.getProperty('voices')
+
+# for voice in voices:
+#    print(voice.id)
+
+engine.setProperty(
+    'voice', 'HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Speech/Voices/Tokens/MS-Anna-1033-20-DSK')
+rate = engine.getProperty('rate')
+
+print("ORIGINAL RATE :  %s" % (rate))
+rate = (rate-90)
+print("MY RATE :  %s" % (rate))
+engine.setProperty('rate', rate)
+
+
+def speak_text_cmd(cmd):
+    engine.say(cmd)
+    engine.runAndWait()
+
+
+def read_voice_cmd():
+    voice_text = ""
+    # with sr.Microphone() as source
+    audio = speech.listen(source)
+    try:
+        voice_text = speech.recognize_google(audio)
+    except sr.UnknownValueError:
+        pass
+    except sr.RequestError:
+        print("NETWORK ERROR !!!!!!!!!!!!!")
+    return voice_text
+
+
+os.system("cls")
+if __name__ == '__main__':
+    pno = 0.00000001
+    #speak_text_cmd('hello boss,amazon polly is not free & requires money for that')
+    f1 = ""
+    F = open('E:\\PYTHONS\\MYPYAI\\GREET-BOSS.txt', 'r')
+    fl = """
+      hi boss
+      how are you?
+      its d best way
+     f.read()
+     """
+    print(f1+"\n\n\n")
+    for line in F:
+        print('FROM D FILE : '+line)
+        speak_text_cmd(line)
+    # f.close()
+    # speak_text_cmd(X)
